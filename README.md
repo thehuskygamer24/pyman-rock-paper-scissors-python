@@ -11,6 +11,7 @@
 ## first problem with server what happens if my computer is turned off and someone is trying to connect to the game
 ### you will just need to contact me at discord for me to turn my computer on
 ### my computer hosts the game
-# you can either code your own custom server or use the sample server at the branch
+# you can either code your own custom server or ask the owner for a private server
+## https://discord.gg/ZgyWz55E
 ### if you really want to play it you will need to create your own custom server for it (requires code to code a custom server for it and it is hard to do)
 
