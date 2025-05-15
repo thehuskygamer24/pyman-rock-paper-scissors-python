@@ -11,7 +11,7 @@ def startgame():
  while True:
   userinput = float(input("1 2 3. "))
   try:
-   requests.get("https://0a526b55-53a3-4399-abef-136348916a3b-00-16ciu3enkb4nk.picard.replit.dev/update",timeout=7)
+   requests.get("http://localhost:3007/update",timeout=7)
   except Timeout:
     print("Please Log Back in again")
     time.sleep(3)
@@ -35,7 +35,7 @@ def startgame():
   print("cpu's response " + randomshoot)
 def serverconnect():
  try:
-   requests.get("https://0a526b55-53a3-4399-abef-136348916a3b-00-16ciu3enkb4nk.picard.replit.dev/", timeout=7)
+   requests.get("http://localhost:3007", timeout=7)
    time.sleep(10)
    print("server connection successful you are signed in as a guest")
  except Timeout:
