@@ -19,7 +19,7 @@ def startgame():
     print("if server issue presists contact the owner of the game or support")
     time.sleep(3000000)
   except ConnectionError:
-    print("no internet connection please check your internet and try again")
+    print("server connection failed or no internet")
     startgameapproval = False
     time.sleep(300000)
   randomshoot = random.choice(gamehub)
@@ -43,7 +43,7 @@ def serverconnect():
    startgameapproval = False
    time.sleep(30000)
  except ConnectionError:
-   print("no internet connection please check your internet and try again")
+   print("server connection failed or no internet")
    startgameapproval = False
    time.sleep(3000000)
 
