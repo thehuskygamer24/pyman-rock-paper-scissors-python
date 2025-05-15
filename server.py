@@ -1,6 +1,6 @@
 from flask import Flask 
 import requests
-a1 = requests.get("")
+a1 = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/serveractive.txt")
 app = Flask(__name__)
 serverversion = "0.2.3"
 @app.route("/")
