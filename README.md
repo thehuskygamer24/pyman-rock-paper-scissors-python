@@ -6,9 +6,11 @@
 ### you can wait a while because im planning to make this project open source
 ### game is in early access with server connectivity that means you will need wifi for this thing to work
 ### i will eventually add offline mode in it 
-## server trouble is resolved
+## server trouble is BROKEN AGAIN
 ## users can play the game and the server just runs on my computer i will need to start my computer for the server to work
 ## first problem with server what happens if my computer is turned off and someone is trying to connect to the game
 ### you will just need to contact me at discord for me to turn my computer on
 ### my computer hosts the game
+# you can either code your own custom server or use the sample server at the branch
 ### if you really want to play it you will need to create your own custom server for it (requires code to code a custom server for it and it is hard to do)
+
