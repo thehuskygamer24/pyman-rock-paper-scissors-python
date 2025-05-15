@@ -1,4 +1,6 @@
 from flask import Flask 
+import requests
+a1 = requests.get("")
 app = Flask(__name__)
 serverversion = "0.2.3"
 @app.route("/")
@@ -11,4 +13,7 @@ def version():
 def heartbeat():
   return "heartbeat1"
 if __name__ == "__main__":
+  
  app.run(host="0.0.0.0", port=3007)
+elif a1.text == "false":
+  exit()
