@@ -1,5 +1,5 @@
 # pyman-rock-paper-scissors python
-## you need python version 3.13 and pip install random time requests
+## you need python version 3.13 and pip install random time requests colorama
 ## a simple game of rock paper scissors made in python
 # users may ignore this but should read
 ### if you decide to fork this and claim it as yours there will be trouble
