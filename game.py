@@ -5,12 +5,13 @@ startgameapproval = True
 from colorama import Fore,init
 init(autoreset=True)
 from requests.exceptions import ConnectionError
-getgamestate = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/serveractive.txt")
+getgamestate = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/serverstat.txt")
 getgamestatereason = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/shutdownreason.txt")
 if getgamestate.text.strip() == "true":
   startgameapproval = False
-  print(Fore.RED + "game services are offline" + "reason:", end='')
-  print(Fore.YELLOW + getgamestatereason)
+  print(Fore.RED + "game services are offline " + "reason: ", end='')
+  print(Fore.YELLOW + getgamestatereason.text.strip())
+  time.sleep(3000000)
 else:
   pass
 
