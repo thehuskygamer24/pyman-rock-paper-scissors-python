@@ -36,7 +36,7 @@ def startgame():
    requests.get("http://localhost:3007/update")
   
   
-   time.sleep(3)
+   time.sleep(0.7)
   except ConnectionError:
     print("game session logged out")
     time.sleep(3)
