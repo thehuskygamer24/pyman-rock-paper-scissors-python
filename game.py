@@ -11,8 +11,8 @@ getgamestate = requests.get("https://raw.githubusercontent.com/thehuskygamer24/p
 getgamestatereason = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/shutdownreason.txt")
 if getgamestate.text.strip() == "true":
   startgameapproval = False
-  print(Fore.RED + "game services are unavaiable " + "reason: ", end='')
-  print(Fore.YELLOW + getgamestatereason.text.strip())
+  print(Fore.RED + "pyman RPS services are unavailable " + "reason: ", end='')
+  print(Fore.LIGHTRED_EX + getgamestatereason.text.strip())
   time.sleep(3000000)
 else:
   pass
@@ -79,7 +79,9 @@ def serverconnect():
    if c1.text == clientversion:
     pass
    else:
-     print("client outdated please update the software https://github.com/thehuskygamer24/pyman-rock-paper-scissors-python")
+     print(Fore.RED + "client outdated please update the software https://github.com/thehuskygamer24/pyman-rock-paper-scissors-python")
+     print(Fore.YELLOW + "be aware the client will not bypass the update requirement")
+     print(Fore.YELLOW + "if there is an issue with updating pyman or version not set correctly between the client server or both then please contact @supersaiyanslasher on discord the owner of the game")
      startgameapproval = False
      time.sleep(30000)
    time.sleep(3)
