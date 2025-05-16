@@ -25,7 +25,7 @@ if p2 == "":
   pass
 else:
  accountuser = p2.text.strip()
-clientversion = "0.2.7"
+clientversion = "0.3.0"
 
 
 
