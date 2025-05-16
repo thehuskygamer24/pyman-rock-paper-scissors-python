@@ -1,6 +1,8 @@
 import random
 import time
 import requests
+import os
+os.system("title Pyman RPS Cmd Game")
 startgameapproval = True
 from colorama import Fore,init
 init(autoreset=True)
@@ -16,7 +18,7 @@ else:
   pass
 
 accountuser = ""
-print("use the input below to use 1 for rock 2 for paper 3 for scissors")
+print(Fore.YELLOW + "use the input below to use 1 for rock 2 for paper 3 for scissors")
 gamehub = ["rock","paper", "scissors", "paper","scissors","rock","scissors","paper","rock","rock","scissors","paper"]
 p2 = requests.get("http://localhost:3007/accountget")
 if p2 == "":
@@ -31,23 +33,23 @@ clientversion = "0.2.7"
 def startgame():
  while True:
   
-  userinput = float(input("1 2 3. "))
+  userinput = float(input(Fore.LIGHTBLUE_EX + "1 2 3. "))
   try:
    requests.get("http://localhost:3007/update")
   
   
    time.sleep(0.7)
   except ConnectionError:
-    print("game session logged out")
+    print(Fore.YELLOW + "game session logged out")
     time.sleep(3)
-    print("unable to connect to a session code 3")
+    print(Fore.RED + "unable to connect to a session code 3")
     time.sleep(10)
-    print("server connection failed or no internet")
+    print(Fore.RED + "server connection failed or no internet")
     startgameapproval = False
     time.sleep(300000)
   randomshoot = random.choice(gamehub)
   print("rock paper scissors")
-  time.sleep(3)
+  time.sleep(1)
  
   if userinput == 1:
      print(Fore.BLUE + "your response rock")
@@ -66,7 +68,7 @@ def startgame():
       print("scissors")
     else:
       print("auto shoot failed")
-    print("game has automaticly chose for you to avoid a crash")
+    print(Fore.YELLOW + "game has automaticly chose for you to avoid a crash")
    
     
   print(Fore.RED + "cpu's response " + randomshoot)
@@ -88,20 +90,20 @@ def serverconnect():
    
   
   
-    print("server connection successful you are signed in as "+ m1)
-    print("your team Blue")
+    print(Fore.GREEN + "server connection successful you are signed in as "+ m1)
+    print(Fore.BLUE + "your team Blue")
    else:
-    print("server connection successful you are signed in as "+ p2.text)
-    print("your team Blue")
+    print(Fore.GREEN + "server connection successful you are signed in as "+ p2.text)
+    print(Fore.BLUE + "your team Blue")
  except ConnectionError:
-   print("server connection failed or no internet")
+   print(Fore.RED + "server connection failed or no internet")
    startgameapproval = False
    time.sleep(3000000)
 
 
-print("welcome to pyman rock paper scissors")
+print(Fore.BLUE + "welcome to pyman rock paper scissors")
 time.sleep(1)
-print("connecting to server")
+print(Fore.CYAN + "connecting to server")
 serverconnect()
 if startgameapproval == False:
   pass
