@@ -11,7 +11,7 @@ getgamestate = requests.get("https://raw.githubusercontent.com/thehuskygamer24/p
 getgamestatereason = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/shutdownreason.txt")
 if getgamestate.text.strip() == "true":
   startgameapproval = False
-  print(Fore.RED + "game services are offline " + "reason: ", end='')
+  print(Fore.RED + "game services are unavaiable " + "reason: ", end='')
   print(Fore.YELLOW + getgamestatereason.text.strip())
   time.sleep(3000000)
 else:
