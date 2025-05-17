@@ -26,7 +26,7 @@ gamehub = ["rock","paper", "scissors", "paper","scissors","rock","scissors","pap
   #pass
 #else:
  #accountuser = p2.text.strip()
-clientversion = "0.3.0"
+clientversion = "0.4.1"
 
 
 def musicintro():
