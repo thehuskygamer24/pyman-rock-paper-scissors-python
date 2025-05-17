@@ -1,5 +1,5 @@
 # pyman-rock-paper-scissors python
-## you need python version 3.13 and pip install random time requests colorama
+## you need python version 3.13 and pip install random time requests colorama playsound==1.2.2
 ## a simple game of rock paper scissors made in python
 # users may ignore this but should read
 ### if you decide to fork this and claim it as yours there will be trouble
@@ -15,5 +15,5 @@
 # UPDATE LOG FOR GAME 
 ## music and live server is here
 ### music will play before your match starts in pyman rps 
-### and the game has a new server
+### and the game has a new working server
 
