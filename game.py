@@ -26,7 +26,7 @@ clientversion = "0.3.5"
 
 
 def musicintro():
-  playsound("soundtracks/5h.mp3")
+  playsound("pyman music.mp3")
 
 def startgame():
  while True:
