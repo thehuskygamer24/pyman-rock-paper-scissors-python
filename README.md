@@ -12,8 +12,6 @@
 ### which should not cause problems unless the internet goes out on it or the gateway goes out
 ### the game should work without the localserver in this repo
 ### have fun
-# UPDATE LOG FOR GAME 
-## music and live server is here
-### music will play before your match starts in pyman rps 
-### and the game has a new working server
+# custom server policy
+### we do not allow custom servers on pyman unless permission is given by the owner
 
