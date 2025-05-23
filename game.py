@@ -20,7 +20,7 @@ gamehub = ["rock","paper", "scissors", "paper","scissors","rock","scissors","pap
 
 
 
-clientversion = "0.3.4"
+clientversion = "0.3.5"
 pathr = "system/New folder (7)/fgdt.txt"
 b6 =open(pathr)
 b7 = b6.read()
@@ -116,14 +116,15 @@ def serverconnect():
  
 def mainmenu():
   
-  print("(1) Play Game")
-  print("(2) ShutDown Game")
-  print("(3) gallery")
-  print("(4) staff contact")
-  print("(5) settings")
+  print(Fore.LIGHTGREEN_EX + "(1) Play Game")
+  print(Fore.LIGHTGREEN_EX + "(2) Shutdown Game")
+  print(Fore.LIGHTGREEN_EX + "(3) Gallery")
+  print(Fore.LIGHTGREEN_EX + "(4) Staff contact")
+  print(Fore.LIGHTGREEN_EX + "(5) Update Log")
+  print(Fore.LIGHTGREEN_EX + "(6) Settings")
   vm1 = input('')
   if vm1 == '1':
-    print("Its Game Time")
+    print(Fore.CYAN + "Its Game Time")
     time.sleep(3)
     print(Fore.LIGHTGREEN_EX + "your command pallet has been enabled have fun :)")
     startgame()
@@ -142,9 +143,11 @@ def mainmenu():
 
     input("back. ")
     mainmenu()
-
-
   elif vm1 == "5":
+    bm1 = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/update.txt")
+    print(bm1)
+
+  elif vm1 == "6":
     print("settings feature coming soon")
     time.sleep(3)
     mainmenu()
