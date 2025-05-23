@@ -15,7 +15,7 @@ from requests.exceptions import ConnectionError
 
 
 
-print(Fore.YELLOW + "use the input below to use 1 for rock 2 for paper 3 for scissors")
+print(Fore.YELLOW + "use the input below to use 1 for rock 2 for paper 3 for scissors and then 4 to return to menu")
 gamehub = ["rock","paper", "scissors", "paper","scissors","rock","scissors","paper"]
 
 
@@ -44,7 +44,7 @@ def musicintro():
 def startgame():
  while True:
   
-  userinput = float(input(Fore.LIGHTBLUE_EX + "1 2 3. "))
+  userinput = float(input(Fore.LIGHTBLUE_EX + "1 2 3 4. "))
   try:
    requests.get("https://45.23.232.171:3007/update",verify='auth/cert.pem')
   
@@ -68,6 +68,10 @@ def startgame():
      print(Fore.BLUE + "your response paper")
   elif userinput == 3:
     print(Fore.BLUE + "your response scissors")
+  elif userinput == 4:
+    print("returning to main menu. ")
+    returntime = random(float(1,2,3,5))
+    time.sleep(returntime)
   else:
     print("option invalid")
     avoidcrashplrshoot = random(float(1,2,3))
@@ -77,6 +81,7 @@ def startgame():
       print("paper")
     elif avoidcrashplrshoot == 3:
       print("scissors")
+      
     else:
       print("auto shoot failed")
     print(Fore.YELLOW + "game has automaticly chose for you to avoid a crash")
@@ -145,8 +150,9 @@ def mainmenu():
     mainmenu()
   elif vm1 == "5":
     bm1 = requests.get("https://raw.githubusercontent.com/thehuskygamer24/pyman-rock-paper-scissors-python/refs/heads/main/update.txt")
-    print(bm1)
-
+    print(bm1.text.strip())
+    input("back. ")
+    mainmenu()
   elif vm1 == "6":
     print("settings feature coming soon")
     time.sleep(3)
@@ -166,7 +172,7 @@ if startgameapproval == False:
 else:
 
  
- musicintro()
+ 
  mainmenu()
  time.sleep(3)
  
