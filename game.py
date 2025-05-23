@@ -4,7 +4,7 @@ import requests
 import os
 
 from playsound import playsound
-os.system("title Pyman RPS Cmd Game")
+os.system("title Pyman RPS")
 startgameapproval = True
 from colorama import Fore
 
@@ -39,23 +39,23 @@ else:
 
 
 def musicintro():
-  playsound("soundtracks/intromusic.mp3")
+  playsound("soundtracks/5h.mp3")
 
 def startgame():
  while True:
   
   userinput = float(input(Fore.LIGHTBLUE_EX + "1 2 3. "))
   try:
-   requests.get("https://192.168.1.65:3007/update",verify='auth/cert.pem')
+   requests.get("https://45.23.232.171:3007/update",verify='auth/cert.pem')
   
   
    time.sleep(0.7)
   except ConnectionError:
     print(Fore.YELLOW + "game session logged out")
     time.sleep(3)
-    print(Fore.RED + "unable to connect to a session code 3")
+    print(Fore.RED + "no active server connection session code 3")
     time.sleep(10)
-    print(Fore.RED + "server connection interupted unexpectly please relaunch the game and try again")
+    print(Fore.RED + "server connection reset changed or shutdown unexpectly please relaunch the game and try again")
     startgameapproval = False
     time.sleep(300000)
   randomshoot = random.choice(gamehub)
@@ -86,8 +86,9 @@ def startgame():
 
 def serverconnect():
  try:
-   requests.get("https://192.168.1.65:3007", verify='auth/cert.pem')
-   c1 = requests.get("https://192.168.1.65:3007/version", verify='auth/cert.pem')
+   requests.get("https://45.23.232.171:3007", verify='auth/cert.pem')
+   c1 = requests.get("https://45.23.232.171:3007/version", verify='auth/cert.pem')
+   
    if c1.text == clientversion:
     pass
    else:
@@ -99,7 +100,11 @@ def serverconnect():
    time.sleep(1)
  
    
-  
+   try:
+     requests.get("https://45.23.232.171:3007/tempprofile",verify='auth/cert.pem')
+   except ConnectionError:
+     print(Fore.RED + "Failed to log into session-profile: Code 2")
+     time.sleep(30000)
   
    print(Fore.LIGHTYELLOW_EX + "server connection successful you are signed in as "+ "Player Blue")
    print(Fore.BLUE + "your team Blue")
@@ -108,10 +113,11 @@ def serverconnect():
    print(Fore.RED + "failed to connect to RPS.NET error code: outage")
    startgameapproval = False
    time.sleep(3000000)
+ 
 def mainmenu():
   
   print("(1) Play Game")
-  print("(2) change username")
+  print("(2) ShutDown Game")
   print("(3) gallery")
   print("(4) staff contact")
   print("(5) settings")
@@ -122,10 +128,7 @@ def mainmenu():
     print(Fore.LIGHTGREEN_EX + "your command pallet has been enabled have fun :)")
     startgame()
   elif vm1 == '2':
-    print("usernames systems Permanentley removed")
-    
-    time.sleep(3)
-    mainmenu()
+    exit()
   elif vm1 == "3":
     print("(1) Top wins")
     print("(2) ultimate users who played")
@@ -160,7 +163,7 @@ if startgameapproval == False:
 else:
 
  
- 
+ musicintro()
  mainmenu()
  time.sleep(3)
  
