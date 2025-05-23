@@ -21,21 +21,8 @@ gamehub = ["rock","paper", "scissors", "paper","scissors","rock"]
 
 
 clientversion = "0.3.5"
-pathr = "system/New folder (7)/fgdt.txt"
-b6 =open(pathr)
-b7 = b6.read()
-if not b7 == "":
-  pass
-  
-else:
- 
- cms = random.randint(1,100000)
 
- 
 
- cm = open(pathr, "w")
- cm.write(str(cms))
- cm.close()
 
 
 def musicintro():
