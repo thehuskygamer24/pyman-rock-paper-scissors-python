@@ -16,7 +16,7 @@ from requests.exceptions import ConnectionError
 
 
 print(Fore.YELLOW + "use the input below to use 1 for rock 2 for paper 3 for scissors and then 4 to return to menu")
-gamehub = ["rock","paper", "scissors", "paper","scissors","rock","scissors","paper"]
+gamehub = ["rock","paper", "scissors", "paper","scissors","rock"]
 
 
 
@@ -59,8 +59,8 @@ def startgame():
     startgameapproval = False
     time.sleep(300000)
   randomshoot = random.choice(gamehub)
-  print("rock paper scissors")
-  time.sleep(1)
+ 
+  time.sleep(0.4)
  
   if userinput == 1:
      print(Fore.BLUE + "your response rock")
@@ -70,8 +70,9 @@ def startgame():
     print(Fore.BLUE + "your response scissors")
   elif userinput == 4:
     print("returning to main menu. ")
-    returntime = random(float(1,2,3,5))
-    time.sleep(returntime)
+    
+    time.sleep(1)
+    mainmenu()
   else:
     print("option invalid")
     avoidcrashplrshoot = random(float(1,2,3))
