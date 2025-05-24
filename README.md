@@ -13,5 +13,5 @@
 ### the game should work without the localserver in this repo
 ### have fun
 # custom server policy
-### we do not allow custom servers on pyman rps unless permission is given by the owner
+### customs servers can be used only on older builds 
 
